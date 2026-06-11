@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+pydantic[email]
+sqlalchemy[asyncio]
+asyncpg
+motor
+redis
+python-dotenv
