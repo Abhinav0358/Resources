@@ -1,6 +1,48 @@
-# 10.1.1 Best Prompting Practices
+How to prompt?
 
-Prompting is the art of **instruction design**. To get reliable, high-quality responses from an LLM, follow these industry-standard practices (based on OpenAI & Anthropic guides).
+there is some overlap between skill of a good prompter and a manager
+
+world building 
+
+give it as many puzzle pieces as possible, otherwise it would be as generic as possible
+
+give a lot of examples
+a lot of system prompts have lots of examples
+
+
+Meta prompting 
+perhaps the model itself knows how to prompt diffusion models,
+ask the system for a good prompt for a diffusion model, edit it, go into the specifics and then use the prompt.
+
+Personas
+Tell it to be a specific person, it can adjust itself accordingly, you can also set a perspective about yourself, teach me this as if i am 5,10,25.
+
+Gap finder
+Ask the model to find gaps in your knowledge..
+
+Preventing hallucination
+answer only if you are confident about this
+Attach a confidence score to your answer..
+
+Maybe use voice note
+a good prompt is at least 10-20 lines 
+
+
+How to make it write good?
+Avoid any sentence structures that set up and then negate or expand beyond expectations, Like X isn't just about Y or X is more than just Y, instead use direct affirmative sentences. Feel free to be creative with your sentence structures and expression styles.
+
+Write like person X,Y,Z
+
+dump it with your original writing
+
+
+Whats next to learn
+
+
+
+Emotional prompting
+threaten it, its trained on human data, so some traces of how humans think, have merged into it.
+
 
 ## 1. Be Specific and Clear
 Vague instructions lead to vague results. 
@@ -40,7 +82,8 @@ For complex reasoning, ask the model to explain its steps before giving the fina
 *   **Temperature = 0.0:** Deterministic, best for coding and extraction.
 *   **Temperature = 0.7 - 1.0:** Creative, best for brainstorming and chat.
 
----
+
+
 
 ### Standard Prompt Template
 ```text
@@ -50,3 +93,10 @@ For complex reasoning, ask the model to explain its steps before giving the fina
 [Constraints]: Avoid [X], use [Y] tone, and keep it under [Z] words.
 [Format]: Output as [JSON/Markdown].
 ```
+
+
+
+
+![lostinmiddle](diagrams/lostinmiddle.png)
+make sure that the context window is not too long, otherwise the model might loose the middle part and just focus on the beginning and the end,
+you can look up the context windows of different models
